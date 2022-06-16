@@ -4,7 +4,7 @@ import pandas as pd
 from oauth2client.service_account import ServiceAccountCredentials
 from Google import Create_Service
 
-CLIENT_SECRET_FILE = 'client_secret.json'
+CLIENT_SECRET_FILE = 'client_secret_2.json'
 API_NAME = 'sheets'
 API_VERSION = 'v4'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
@@ -32,12 +32,7 @@ service.spreadsheets().values().update(
 ).execute()
 
 
-
-
-
-
-
-
+"""
 gc = gspread.service_account(filename='python-first.json')
 sh = gc.open_by_url('https://docs.google.com/spreadsheets/d/1FqFhLDSlh7rcK322tk_Go_cf4dF-GGjbHd_aPkKkbHQ/edit#gid=0')
 scope = ['https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive","https://www.googleapis.com/auth/drive.readonly"]
@@ -55,3 +50,4 @@ df2.to_csv('Test1.csv',index=False)
 
 df = pd.read_csv('Test1.csv')
 sheet.update([df.columns.values.tolist()] + df.values.tolist())
+"""
